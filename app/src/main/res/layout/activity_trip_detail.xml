@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header gradient -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/bg_header_gradient"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_trip_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/salida_a_valparaiso"
+            android:textColor="@color/md_theme_onPrimary"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_trip_date"
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_10_nov_2025"
+            android:textColor="@color/md_theme_onPrimary"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <!-- Content -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_add_expense"
+                android:layout_width="250dp"
+                android:layout_weight="@integer/material_motion_duration_short_2"
+                android:layout_height="wrap_content"
+                android:text="@string/registrar_gasto"
+                tools:ignore="VisualLintButtonSize" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_view_balance"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ver_balance1"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:text="@string/gastos"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_expenses"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/md_theme_primary"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

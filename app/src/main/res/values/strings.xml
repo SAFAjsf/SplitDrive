@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SplitDrive</string>
+
+    <!-- Main -->
+    <string name="splitdrive">SplitDrive</string>
+    <string name="organiza_y_divide_gastos_de_viajes_compartidos">Organiza y divide gastos de viajes compartidos</string>
+    <string name="ver_viajes">Ver viajes</string>
+    <string name="perfil_ajustes">Perfil / Ajustes</string>
+
+    <!-- Trip List -->
+    <string name="tus_viajes">Tus viajes</string>
+    <string name="salida_a_valpara_so_4_pax">Salida a Valparaíso (4 pax)</string>
+    <string name="simular_estado_vac_o">Simular estado vacío</string>
+
+    <!-- Trip Detail -->
+    <string name="salida_a_valpara_so">Salida a Valparaíso</string>
+    <string name="fecha_10_nov_2025">Fecha: 10 Nov 2025</string>
+    <string name="participantes">Participantes</string>
+    <string name="ana_n_bruno_n_carla_n_javier">Ana • Bruno • Carla • Javier</string>
+    <string name="registrar_gasto_r_pido">Registrar gasto rápido</string>
+    <string name="ver_balance">Ver balance</string>
+    <string name="gastos_registrados">Gastos registrados</string>
+    <string name="gasolina_40_000_pag_ana">Gasolina: $40.000 — pagó Ana</string>
+    <string name="peaje_3_000_pag_bruno">Peaje: $3.000 — pagó Bruno</string>
+
+    <!-- Add Expense -->
+    <string name="registrar_pago">Registrar pago</string>
+    <string name="monto">Monto</string>
+    <string name="categor_a">Categoría</string>
+    <string name="dividir_entre">Dividir entre:</string>
+
+    <string name="ana_seleccionada">Ana (incluida)</string>
+    <string name="bruno_seleccionada">Bruno (incluido)</string>
+    <string name="carla_seleccionada">Carla (incluida)</string>
+    <string name="javier_seleccionada">Javier (incluido)</string>
+
+    <string name="guardar_simulado">Guardar (simulado)</string>
+
+    <!-- Balance -->
+    <string name="balance_del_viaje">Balance del viaje</string>
+    <string name="ana_debe_recibir_7_000">Ana debe recibir: $7.000</string>
+    <string name="bruno_debe_pagar_1_000">Bruno debe pagar: $1.000</string>
+    <string name="carla_debe_pagar_3_000">Carla debe pagar: $3.000</string>
+    <string name="javier_debe_pagar_0">Javier debe pagar: $0</string>
+    <string name="marcar_como_saldado">Marcar como saldado</string>
+
+    <!-- Empty State -->
+    <string name="a_n_no_tienes_viajes">Aún no tienes viajes</string>
+    <string name="crea_tu_primer_viaje_o_invita_a_amigos_para_compartir_gastos">
+        Crea tu primer viaje o invita a amigos para compartir gastos.
+    </string>
+    <string name="volver">Volver</string>
+    <string name="simular_error">Simular error</string>
+
+    <!-- Error State -->
+    <string name="error_al_cargar_datos">Error al cargar datos</string>
+    <string name="revisa_tu_conexi_n_o_intenta_m_s_tarde">Revisa tu conexión o intenta más tarde</string>
+    <string name="reintentar">Reintentar</string>
+
+    <!-- Profile -->
+    <string name="perfil__ajustes">Perfil / Ajustes</string>
+    <string name="nombre_javier_sep_lveda">Nombre: Javier Sepúlveda</string>
+    <string name="notificaciones_activadas">Notificaciones: Activadas</string>
+    <string name="divisa_clp">Divisa: CLP</string>
+    <string name="cerrar_sesi_n_simulado">Cerrar sesión (simulado)</string>
+    <string name="_40_000">$40.000</string>
+    <string name="gasolina">Gasolina</string>
+    <string name="_10_nov">· 10 Nov</string>
+    <string name="pag_ana">Pagó: Ana</string>
+    <string name="salida_a_valparaiso">Salida a Valparaíso</string>
+    <string name="_10_nov_2025">10 Nov 2025</string>
+    <string name="gastos">Gastos</string>
+    <string name="registrar_gasto">Registrar gasto</string>
+    <string name="ver_balance1">Ver balance</string>
+    <string name="cerrar_sesi_n">Cerrar sesión</string>
+    <string name="registrar_pago1">Registrar pago</string>
+    <string name="monto1">Monto</string>
+    <string name="categoria">Categoría</string>
+    <string name="guardar">Guardar</string>
+
+</resources>

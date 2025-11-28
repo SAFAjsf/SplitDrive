@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:gravity="center" android:padding="24dp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:text="@string/error_al_cargar_datos" android:textSize="30sp" android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/md_theme_primary"/>
+    <TextView android:text="@string/revisa_tu_conexi_n_o_intenta_m_s_tarde" android:layout_marginTop="8dp" android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/md_theme_onSecondary"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_retry" android:layout_marginTop="20dp"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="@string/reintentar"/>
+</LinearLayout>

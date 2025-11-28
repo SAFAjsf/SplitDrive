@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Color de fondo del Spinner -->
+    <solid android:color="@color/celeste_pastel" />
+
+    <!-- Bordes redondeados opcionales -->
+    <corners android:radius="6dp" />
+
+    <!-- Padding interno (opcional pero recomendado) -->
+    <padding
+        android:left="12dp"
+        android:top="10dp"
+        android:right="12dp"
+        android:bottom="10dp" />
+</shape>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_balance_title"
+        android:text="@string/balance_del_viaje"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/md_theme_primary" />
+
+    <TextView
+        android:id="@+id/tv_ana"
+        android:layout_marginTop="12dp"
+        android:text="@string/ana_debe_recibir_7_000"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/text_primary"/>
+
+    <TextView
+        android:id="@+id/tv_bruno"
+        android:layout_marginTop="6dp"
+        android:text="@string/bruno_debe_pagar_1_000"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/text_primary"/>
+
+    <TextView
+        android:id="@+id/tv_carla"
+        android:layout_marginTop="6dp"
+        android:text="@string/carla_debe_pagar_3_000"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/text_primary"/>
+
+    <TextView
+        android:id="@+id/tv_javier"
+        android:layout_marginTop="6dp"
+        android:text="@string/javier_debe_pagar_0"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/text_primary"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_settle"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/marcar_como_saldado"/>
+
+</LinearLayout>
+
