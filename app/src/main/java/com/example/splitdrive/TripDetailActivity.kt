@@ -16,7 +16,7 @@ class TripDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trip_detail)
 
-        tripId = intent.getIntExtra("tripId", 1)
+        tripId = intent.getIntExtra("tripId", -1)
 
         val tvTripName = findViewById<TextView>(R.id.tv_trip_name)
         val tvTripDate = findViewById<TextView>(R.id.tv_trip_date)
@@ -25,9 +25,10 @@ class TripDetailActivity : AppCompatActivity() {
         val rv = findViewById<RecyclerView>(R.id.rv_expenses)
 
         val trip = DataRepository.getTripById(tripId)
+
         if (trip != null) {
             tvTripName.text = trip.name
-            tvTripDate.text = trip.date
+            tvTripDate.text = trip.fecha
         }
 
         rv.layoutManager = LinearLayoutManager(this)
@@ -48,9 +49,8 @@ class TripDetailActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
-        // refresh list after returning from AddExpenseActivity
-        val trip = DataRepository.getTripById(tripId)
         val rv = findViewById<RecyclerView>(R.id.rv_expenses)
+        val trip = DataRepository.getTripById(tripId)
         rv.adapter = ExpenseAdapter(trip?.expenses ?: emptyList())
     }
 }

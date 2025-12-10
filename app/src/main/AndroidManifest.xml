@@ -13,13 +13,17 @@
         android:theme="@style/Theme.SplitDrive">
 
         <!-- Pantalla principal -->
-        <activity
-            android:name=".MainActivity"
+        <activity android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
         </activity>
 
         <!-- Otras pantallas (activities añadidas) -->
@@ -30,6 +34,7 @@
         <activity android:name=".EmptyStateActivity" />
         <activity android:name=".ErrorStateActivity" />
         <activity android:name=".ProfileActivity" />
+        <activity android:name=".NewTripActivity" />
 
     </application>
 

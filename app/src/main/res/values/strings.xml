@@ -79,5 +79,8 @@
     <string name="monto1">Monto</string>
     <string name="categoria">Categoría</string>
     <string name="guardar">Guardar</string>
+    <string name="iniciar_sesi_n_con_google">Iniciar sesión con Google</string>
+    <string name="estado_no_autenticado">Estado: No autenticado</string>
+    <string name="default_web_client_id">\n\n</string>
 
 </resources>

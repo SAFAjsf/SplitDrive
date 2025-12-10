@@ -1,5 +1,6 @@
 package com.example.splitdrive
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Spinner
@@ -7,16 +8,30 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
+import com.google.firebase.auth.FirebaseAuth
+
+
+// Se elimina la propiedad de extensión incorrecta: private val Unit.participants: Any
+// Los accesos a DataRepository se hacen directamente usando el objeto DataRepository
 
 class AddExpenseActivity : AppCompatActivity() {
 
-    private var tripId: Int = -1
+    var tripId: Int = -1
+
+    override fun onStart() {
+        super.onStart()
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user == null) {
+            // Asumo que tienes una actividad LoginActivity
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_expense)
 
-        // Recibir ID del viaje
         tripId = intent.getIntExtra("tripId", -1)
 
         val etAmount = findViewById<TextInputEditText>(R.id.et_amount)
@@ -24,14 +39,14 @@ class AddExpenseActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.spinner_paidby)
         val btnSave = findViewById<MaterialButton>(R.id.btn_save_expense)
 
-        // Obtener información del viaje
+        // Usamos DataRepository.getTripById (ahora pública)
         val trip = DataRepository.getTripById(tripId)
 
-        // Si no existen participantes, usar fallback
-        val participants = trip?.participants?.ifEmpty { null }
-            ?: listOf("Ana", "Bruno")
+        // Corregido: Si trip es null, usamos la lista de Ana/Bruno, sino usamos los integrantes del viaje
+        val participants: List<String> = trip?.integrantes.orEmpty().ifEmpty {
+            listOf("Ana", "Bruno", "Carla", "Javier") // Lista por defecto si no hay viaje/integrantes
+        }
 
-        // Adaptador del Spinner utilizando un layout más compatible con Material
         val adapter = ArrayAdapter(
             this,
             android.R.layout.simple_spinner_dropdown_item,
@@ -40,13 +55,11 @@ class AddExpenseActivity : AppCompatActivity() {
 
         spinner.adapter = adapter
 
-        // Acción al presionar GUARDAR
         btnSave.setOnClickListener {
             val amountText = etAmount.text?.toString()?.trim().orEmpty()
             val category = etCategory.text?.toString()?.trim().orEmpty()
             val paidBy = spinner.selectedItem?.toString().orEmpty()
 
-            // Validaciones
             if (amountText.isEmpty()) {
                 Toast.makeText(this, "Ingresa el monto", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
@@ -63,7 +76,7 @@ class AddExpenseActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            // Registrar el gasto en el repositorio
+            // Llamada a DataRepository.addExpense (ahora pública)
             DataRepository.addExpense(tripId, amount, category, paidBy)
 
             Toast.makeText(this, "Gasto registrado", Toast.LENGTH_SHORT).show()
@@ -71,3 +84,5 @@ class AddExpenseActivity : AppCompatActivity() {
         }
     }
 }
+
+// Se eliminan las funciones de extensión stub, ahora están en DataRepository.kt

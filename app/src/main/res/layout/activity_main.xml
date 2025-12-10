@@ -3,46 +3,61 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:padding="50sp">
 
     <TextView
         android:id="@+id/tv_app_title"
         android:text="@string/splitdrive"
         android:textColor="@color/text_primary"
-        android:textSize="36sp"
-        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"  android:layout_height="48dp"
-        android:layout_width="match_parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_subtitle"
-        android:layout_marginTop="8dp"
-        android:text="@string/organiza_y_divide_gastos_de_viajes_compartidos"
-        android:textSize="14sp"
-        android:textColor="@color/md_theme_onSecondary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_app_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content" />
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="@string/organiza_y_divide_gastos_de_viajes_compartidos"
+        android:textColor="@color/md_theme_onSecondary"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_app_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_new_trip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nuevo Viaje"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_open_trips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:text="@string/ver_viajes"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_subtitle" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_new_trip" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:text="@string/perfil_ajustes"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_open_trips" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

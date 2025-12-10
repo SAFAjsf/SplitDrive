@@ -10,6 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        findViewById<MaterialButton>(R.id.btn_new_trip).setOnClickListener {
+            startActivity(Intent(this, NewTripActivity::class.java))
+        }
+
         findViewById<MaterialButton>(R.id.btn_open_trips).setOnClickListener {
             startActivity(Intent(this, TripListActivity::class.java))
         }

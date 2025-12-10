@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "321229763342",
+    "project_id": "splitdrive-app",
+    "storage_bucket": "splitdrive-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:321229763342:android:c8d7fae925fb9fb9b1dd5f",
+        "android_client_info": {
+          "package_name": "com.example.splitdrive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "321229763342-d44qt2iaa5r3intl5ale9pb40ufl37i6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.splitdrive",
+            "certificate_hash": "08dadba00607738bd4032ffdfbd30139f7bdade0"
+          }
+        },
+        {
+          "client_id": "321229763342-iecp5r3ia9bd83oko33hokjkocliksu3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyx9sZuFpKM4G6Z4ecSxtNTD3K7oU3Th8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "321229763342-iecp5r3ia9bd83oko33hokjkocliksu3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
