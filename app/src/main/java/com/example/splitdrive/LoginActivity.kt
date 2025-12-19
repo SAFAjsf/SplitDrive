@@ -16,8 +16,8 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-import com.google.firebase.auth.ktx.auth // 💡 Esta línea queda si tienes el KTX
-import com.google.firebase.ktx.Firebase // 💡 Esta línea queda si tienes el KTX
+import com.google.firebase.auth.ktx.auth //
+import com.google.firebase.ktx.Firebase //
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -31,7 +31,6 @@ class LoginActivity : AppCompatActivity() {
     ) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val data: Intent? = result.data
-            // Nota: Aquí corregí el tipo genérico de Task para mejor claridad
             val task: Task<com.google.android.gms.auth.api.signin.GoogleSignInAccount> =
                 GoogleSignIn.getSignedInAccountFromIntent(data)
             try {
@@ -54,7 +53,7 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // 💡 USA EL LAYOUT DE LOGIN AQUÍ
+        // LAYOUT DE LOGIN
         setContentView(R.layout.activity_login)
 
         // 1. Referencias a las vistas
